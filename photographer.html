@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="assets/medias/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <title>Fisheye - photographe </title>
+</head>
+
+<body>
+  <header>
+    <img src="assets/medias/logo.png" class="logo" alt="Logo de FishEye" />
+  </header>
+  <main id="main">
+    <div class="photograph-header">
+      <!--<button class="contact_button" onclick="displayModal()">Contactez-moi</button>-->
+    </div>
+    <div class="sorter">
+      <h2>Trier par :</h2>
+      <select id="sort-select" tabindex="8">
+        <option value="popularite">Popularité</option>
+        <option value="date">Date</option>
+        <option value="titre">Titre</option>
+      </select>
+    </div>
+    <section class="medias">
+
+    </section>
+  </main>
+  <div id="contact_modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal">
+      <header>
+        <div class="modal-infos">
+          <h2>Contactez-moi</h2>
+          <p id="name"></p>
+        </div>
+        <button onclick="closeModal()" tabindex="2"><img src="assets/icons/close.svg" /></button>
+      </header>
+      <form>
+        <div>
+          <label for="firstname">Prénom</label>
+          <input type="text" name="firstname" id="firstname" tabindex="3" />
+          <label for="lastname">Nom</label>
+          <input type="text" name="lastname" id="lastname" tabindex="4" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" tabindex="5" />
+          <label for="message">Votre message</label>
+          <textarea type="message" name="message" id="message" tabindex="6"></textarea>
+        </div>
+        <button class="contact_button" tabindex="7">Envoyer</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal-carroussel" id="modal" tabindex="-1">
+    <div class="modal-content">
+      <span class="close" id="closeModal" tabindex="9">&times;</span>
+      <img src="" alt="Image 1" class="image" id="carroussel-image">
+      <div class="videoContainer">
+
+      </div>
+      <button class="prev" id="prev" tabindex="10">&#10094;</button>
+      <button class="next" id="next" tabindex="11">&#10095;</button>
+    </div>
+  </div>
+  <section id="photographer-infos">
+    <span id="sumLikes"></span>
+    <span id="price"></span>
+  </section>
+  <script src="/scripts/pages/photographer.js"></script>
+  <script src="scripts/factories/photographer.js"></script>
+  <script src="scripts/factories/galeries.js"></script>
+  <script src="/scripts/utils/contactForm.js"></script>
+</body>
+
+</html>

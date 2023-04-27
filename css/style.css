@@ -1,0 +1,81 @@
+@import url("photographer.css");
+
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    overflow-y: auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+h1 {
+    color: #901C1C;
+    margin-right: 100px;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 100px;
+}
+
+.photographer_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 100px;
+}
+
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photographer_section article h2 {
+    color: #D3573C;
+    font-size: 36px;
+}
+
+.photographer_section article img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.photographer_section .details {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.photographer_section .details span:first-child {
+    font-size: 1.2rem;
+    color: #901C1C;
+    font-weight: bold;
+}
+
+.photographer_section .details p {
+    font-size: 1rem;
+    color: black;
+}
+
+.photographer_section .details span:last-child {
+    font-size: 0.9rem;
+    color: #00000093;
+    font-weight: bold;
+}
