@@ -14,6 +14,7 @@ function photographerFactory(data, formatted) {
         div.classList.add('details');
         a.setAttribute('href', '../photographer.html?id='+id);
         a.title = `Voir la page de ${name}`;
+        a.setAttribute("aria-label", 'Consulter la page de ' + name);
         a.appendChild(img);
         img.setAttribute('src', picture);
         img.setAttribute('alt', "Portrait de "+name);
@@ -28,6 +29,7 @@ function photographerFactory(data, formatted) {
         article.appendChild(a);
         article.appendChild(h2);
         article.appendChild(div);
+        article.setAttribute("aria-label", 'Consutler la page de ' + name);
         return article;
       } else {
         const infos = document.createElement('div');

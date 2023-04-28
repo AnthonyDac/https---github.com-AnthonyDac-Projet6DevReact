@@ -18,12 +18,12 @@
     <div class="photograph-header">
       <!--<button class="contact_button" onclick="displayModal()">Contactez-moi</button>-->
     </div>
-    <div class="sorter">
-      <h2>Trier par :</h2>
-      <select id="sort-select" tabindex="8">
-        <option value="popularite">Popularité</option>
-        <option value="date">Date</option>
-        <option value="titre">Titre</option>
+    <div class="sorter" aria-label="Trier par :">
+      <h2 aria-label="Trier par :">Trier par :</h2>
+      <select id="sort-select" tabindex="8" aria-label="Trier par :">
+        <option value="popularite" aria-label="Trier par popularité">Popularité</option>
+        <option value="date" aria-label="Trier par date">Date</option>
+        <option value="titre" aria-label="Trier par titre">Titre</option>
       </select>
     </div>
     <section class="medias">
@@ -54,15 +54,15 @@
       </form>
     </div>
   </div>
-  <div class="modal-carroussel" id="modal" tabindex="-1">
+  <div class="modal-carroussel" id="modal" tabindex="-1" aria-label="Carroussel">
     <div class="modal-content">
-      <span class="close" id="closeModal" tabindex="9">&times;</span>
+      <span class="close" id="closeModal" tabindex="9" aria-label="Fermer le carroussel">&times;</span>
       <img src="" alt="Image 1" class="image" id="carroussel-image">
       <div class="videoContainer">
 
       </div>
-      <button class="prev" id="prev" tabindex="10">&#10094;</button>
-      <button class="next" id="next" tabindex="11">&#10095;</button>
+      <button class="prev" id="prev" tabindex="10" aria-label="Image précédente">&#10094;</button>
+      <button class="next" id="next" tabindex="11" aria-label="Image suivante">&#10095;</button>
     </div>
   </div>
   <section id="photographer-infos">

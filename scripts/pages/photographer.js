@@ -117,38 +117,6 @@ function addEventListeners() {
     });
   });
 }
-/*
-async function displayOnCarroussel(index) {
-  const displayerCarroussel = document.querySelector('#modal');
-  const imageCarroussel = document.querySelector('#carroussel-image');
-  const videoCarroussel = document.querySelector('#carroussel-video');
-  const videoContainer = document.querySelectorAll('.videoContainer');
-  const body = document.querySelector('body');
-  body.style.overflowY = 'hidden';
-  displayerCarroussel.style.display = 'flex';
-  videoContainer.forEach(element => {
-    element.innerHTML = '';
-  })
-  if(medias[index].image) {
-    imageCarroussel.style.display = "flex";
-    videoContainer.forEach(element => {
-      element.style.display = 'none';
-    })
-    imageCarroussel.src = 'assets/medias/' + medias[index].image;
-    imageCarroussel.alt = medias[index].title;
-  } else {
-    imageCarroussel.style.display = "none";
-    const videoElement = document.createElement('video');
-    videoElement.id = 'carroussel-video';
-    videoElement.controls = true;
-    videoElement.innerHTML = `<source src="assets/medias/${medias[index].video}" type="video/mp4">Your browser does not support the video tag.`;
-    videoContainer.forEach(element => {
-      element.style.display = 'flex';
-      element.appendChild(videoElement);
-    })
-  }
-  indexCarroussel = index;
-}*/
 
 async function displayOnCarroussel(index) {
   const displayerCarroussel = document.querySelector('#modal');
@@ -172,6 +140,7 @@ async function displayOnCarroussel(index) {
     });
     imageCarroussel.src = 'assets/medias/' + medias[index].image;
     imageCarroussel.alt = medias[index].title;
+    imageCarroussel.setAttribute("aria-label", medias[index].title);
   } else {
     imageCarroussel.style.display = "none";
     const videoElement = document.createElement('video');

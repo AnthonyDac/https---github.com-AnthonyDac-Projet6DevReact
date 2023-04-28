@@ -16,11 +16,12 @@ function galeryFactory(data) {
     img.classList.add('image-display')
     img.setAttribute("src", mediaUrl);
     img.setAttribute("alt", title);
-    img.setAttribute("aria-label", title);
+    img.setAttribute("aria-label", 'Photo de ' + title);
     img.setAttribute("tabindex", "12");
     h2.textContent = title;
     like_btn.textContent = "❤";
     like_btn.setAttribute("title", "Like/dislike");
+    like_btn.setAttribute("aria-label", 'Ajouter un like à ' + title);
     like_btn.setAttribute("tabindex", "12");
     like_btn.id = 'like-' + id;
     like_btn.classList.add('like-btn');
